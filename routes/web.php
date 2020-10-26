@@ -36,7 +36,7 @@ Route::group(['middleware' => ['web']], function () {
      */
     Route::get('/', function () {
         return view('tasks', [
-            'tasks' => Task::orderBy('created_at', 'asc')->get()
+            'tasks' => Task::orderBy('created_at', 'desc')->get()
         ]);
     });
 
